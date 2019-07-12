@@ -29,15 +29,23 @@ public class PropertyAccesor {
         }
     }
 
-    public String getURL(){
+    public String getURL() {
         return prop.getProperty("url");
     }
 
-    public String getBrowser(){
+    public String getBrowser() {
         return prop.getProperty("browser");
     }
 
     public static void main(String[] args) {
         System.out.println(PropertyAccesor.getInstance().getURL());
+    }
+
+    public String getEmail() {
+        return prop.getProperty("username");
+    }
+
+    public String getPassword() {
+        return prop.getProperty("password");
     }
 }
