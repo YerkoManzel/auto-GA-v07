@@ -25,17 +25,20 @@ public class Login extends BasePage {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement buttonField;
 
+    public Dashboard setCredentials() throws InterruptedException {
+        setEmail(PropertyAccesor.getInstance().getEmail());
+        setPassword(PropertyAccesor.getInstance().getPassword());
+        pressLogin();
+        Thread.sleep(20000);
+        return new Dashboard();
+    }
+
     public void initBrowser() {
         webDriver.get(PropertyAccesor.getInstance().getURL());
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         emailTextField.sendKeys(email);
-    }
-
-    public Dashboard setCredentials() {
-
-        return new Dashboard();
     }
 
     public void setPassword(String password) {
