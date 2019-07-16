@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import testingui.diplomadoumss.org.managepage.BasePage;
+import testingui.diplomadoumss.org.managepage.dashboard.Dashboard;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
 /**
@@ -30,6 +31,11 @@ public class Login extends BasePage {
 
     public void setEmail(String email){
         emailTextField.sendKeys(email);
+    }
+
+    public Dashboard setCredentials() {
+
+        return new Dashboard();
     }
 
     public void setPassword(String password) {
