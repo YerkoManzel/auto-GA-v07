@@ -41,6 +41,14 @@ public class PropertyAccesor {
         System.out.println(PropertyAccesor.getInstance().getURL());
     }
 
+    public int getImplicitTimeWait() {
+        return Integer.parseInt(prop.getProperty("implicitTimeWait"));
+    }
+
+    public int getExplicitTimeWait() {
+        return Integer.parseInt(prop.getProperty("explicitTimeWait"));
+    }
+
     public String getEmail() {
         return prop.getProperty("username");
     }
