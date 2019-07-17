@@ -1,4 +1,4 @@
-package testingui.diplomadoumss.org.stepsdefinitions;
+package testingui.diplomadoumss.org.stepdefinitions;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
