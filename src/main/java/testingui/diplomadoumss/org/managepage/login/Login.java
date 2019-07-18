@@ -7,8 +7,7 @@ import testingui.diplomadoumss.org.managepage.BasePage;
 import testingui.diplomadoumss.org.managepage.dashboard.Dashboard;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
-import static testingui.diplomadoumss.org.manageevents.Event.clickWebElement;
-import static testingui.diplomadoumss.org.manageevents.Event.fillWebElement;
+import static testingui.diplomadoumss.org.manageevents.Event.*;
 
 /**
  * @author Marcelo Garay
@@ -32,6 +31,11 @@ public class Login extends BasePage {
         return setEmail(PropertyAccesor.getInstance().getEmail()).
                 setPassword(PropertyAccesor.getInstance().getPassword()).
                 pressLogin();
+    }
+
+    public Login() {
+//        isWebElementVisible(buttonField);
+        avoidToUse(2);
     }
 
     public void initBrowser() {
